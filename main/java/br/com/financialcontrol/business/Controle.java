@@ -1,22 +1,11 @@
 package br.com.financialcontrol.business;
 
-public class Controle {
+public class Movimento {
     private Long id;
-    private String nome;
-    private Long valorEntrada;
-    private Long valorSaida;
+    private String observacao;
+    private double valor;
+    private String tipoDeMovimento;
 
-    public Controle() {
-    }
-
-    public Controle(Long id, String nome, Long valorEntrada, Long valorSaida) {
-        super();
-        this.id = id;
-        this.nome = nome;
-        this.valorEntrada = valorEntrada;
-        this.valorSaida = valorSaida;
-
-    }
 
     public Long getId() {
         return id;
@@ -26,27 +15,19 @@ public class Controle {
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public String getObservacao() {
+        return observacao;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setObservacao(String getObservacao) {
+        this.getObservacao = getObservacao;
     }
 
-    public Long getValorEntrada() {
-        return valorEntrada;
+    public double getValor() {
+        return valor;
     }
 
-    public void setValorEntrada(Long valorEntrada) {
-        this.valorEntrada = valorEntrada;
-    }
-
-    public Long getValorSaida() {
-        return valorSaida;
-    }
-
-    public void setValorSaida(Long valorSaida) {
-        this.valorSaida = valorSaida;
+    public void setValor(double valor) {
+        this.valor = valor;
     }
 }
