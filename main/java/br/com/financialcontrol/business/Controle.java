@@ -3,13 +3,13 @@ package br.com.financialcontrol.business;
 public class Controle {
     private Long id;
     private String nome;
-    private Long valorEntrada;
-    private Long valorSaida;
+    private Double valorEntrada;
+    private Double valorSaida;
 
     public Controle() {
     }
 
-    public Controle(Long id, String nome, Long valorEntrada, Long valorSaida) {
+    public Controle(Long id, String nome, Double valorEntrada, Double valorSaida) {
         super();
         this.id = id;
         this.nome = nome;
@@ -34,19 +34,19 @@ public class Controle {
         this.nome = nome;
     }
 
-    public Long getValorEntrada() {
+    public Double getValorEntrada() {
         return valorEntrada;
     }
 
-    public void setValorEntrada(Long valorEntrada) {
+    public void setValorEntrada(Double valorEntrada) {
         this.valorEntrada = valorEntrada;
     }
 
-    public Long getValorSaida() {
+    public Double getValorSaida() {
         return valorSaida;
     }
 
-    public void setValorSaida(Long valorSaida) {
+    public void setValorSaida(Double valorSaida) {
         this.valorSaida = valorSaida;
     }
 }
