@@ -1,9 +1,8 @@
 package controller;
 
-import br.com.financialcontrol.business.Controle;
+import br.com.financialcontrol.business.Movimentacao;
 import br.com.financialcontrol.service.ControleService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,13 +15,13 @@ public class FinacialController {
     private ControleService controleService;
 
    @PostMapping("criar/controlefinaceiro")
-   public Controle criarControleFinanceiro(@RequestBody Controle controle){
+   public Movimentacao criarControleFinanceiro(@RequestBody Movimentacao movimento){
 
-        return controleService.criarControleFinanceiro(controle);
+        return controleService.criarControleFinanceiro(movimento);
     }
 
     @GetMapping("/{controleId}")
-    public  List<Controle> obtercontroleId(@PathVariable Long id){
+    public  List<Movimentacao> obtercontroleId(@PathVariable Long id){
         return controleService.obtercontroleId(id);
     }
 
@@ -34,13 +33,13 @@ public class FinacialController {
 
     //put alterar
     @PutMapping("/{controleId}")
-    public String alterarControle(@PathVariable Long id, @RequestBody Controle controle){
-        controleService.alterarControle(id,controle);
+    public String alterarControle(@PathVariable Long id, @RequestBody Movimentacao movimento){
+        controleService.alterarControle(id,movimento);
         return ("Alteração realizad com sucesso");
     }
 
     @GetMapping
-    public List<Controle> listarControle() {
+    public List<Movimentacao> listarControle() {
         return controleService.listarControle();
     }
 }
